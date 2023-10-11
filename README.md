@@ -17,4 +17,4 @@ Please refer to the [Quick Start guide](https://helm.sh/docs/intro/quickstart/) 
 
 
 ### License
-![License](https://img.shields.io/github/license/mach1el/charts?color=purple&style=plastic)
+![License](https://img.shields.io/github/license/mach1el/helm-charts?color=purple&style=plastic)
