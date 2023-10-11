@@ -1,0 +1,21 @@
+apiVersion: v2
+name: prometheus
+description: Prometheus Helm chart for Kubernetes
+type: application
+version: 1.0.0
+appVersion: "v2.47.0"
+kubeVersion: ">=1.19.0-0"
+home: https://prometheus.io/
+icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+maintainers:
+  - name: michael
+    email: th3phantom.m1@gmail.com
+keywords:
+  - monitoring
+  - prometheus
+annotations:
+  "artifacthub.io/license": MIT
+  "artifacthub.io/links": |
+    - name: Chart Source
+      url: https://github.com/mach1el/helm-charts
+    - name: Upstream Project

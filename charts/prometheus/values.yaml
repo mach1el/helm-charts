@@ -1,0 +1,68 @@
+replicaCount: 1
+
+namespace: monitoring
+
+rbac:
+  create: true
+
+image:
+  repository: prom/prometheus
+  pullPolicy: Always
+
+imagePullSecrets: []
+nameOverride: "prometheus"
+fullnameOverride: "prometheus"
+
+prometheusArgs:
+  - "--storage.tsdb.retention.time=730h"
+  - "--config.file=/etc/prometheus/prometheus.yml"
+  - "--storage.tsdb.path=/prometheus/"
+
+serviceAccounts:
+  server:
+    create: true
+    annotations: {}
+
+securityContext:
+  allowPrivilegeEscalation: false
+  privileged: false
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
+
+service:
+  type: ClusterIP
+  name: prometheus
+  protocol: TCP
+  port: 9090
+  targetPort: 9090
+
+ingress:
+  enabled: false
+  className: nginx
+  hosts:
+    - host: ""
+      paths:
+        - backend:
+          path: /federate
+          pathType: Prefix
+  tls: []
+
+resources: {}
+
+kube-state-metrics:
+  enabled: true
+  targets: []
+
+volumeMounts:
+  - name: prometheus-config
+    mountPath: /etc/prometheus
+  - name: prometheus-storage
+    mountPath: /prometheus/
+
+volumes:
+  - name: prometheus-config
+    configMap:
+      defaultMode: 420
+      name: prometheus-config
+  - name: prometheus-storage
+    emptyDir: {}
