@@ -68,11 +68,9 @@ data:
         - source_labels: [__meta_kubernetes_pod_name]
           action: replace
           target_label: kubernetes_pod_name
-      {{- if .Values.kube-state-metrics.enabled -}}
       - job_name: 'kube-state-metrics'
         static_configs:
-          - targets: {{ .Values.kube-state-metrics.targets }}
-      {{- end }}
+          - targets: kube-state-metrics.monitoring.svc.cluster.local:8080
       - job_name: 'kubernetes-cadvisor'
         scheme: https
         tls_config:
