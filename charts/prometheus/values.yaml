@@ -49,10 +49,6 @@ ingress:
 
 resources: {}
 
-kube-state-metrics:
-  enabled: true
-  targets: []
-
 volumeMounts:
   - name: prometheus-config
     mountPath: /etc/prometheus
