@@ -18,10 +18,10 @@ prometheusArgs:
   - "--config.file=/etc/prometheus/prometheus.yml"
   - "--storage.tsdb.path=/prometheus/"
 
-serviceAccounts:
-  server:
-    create: true
-    annotations: {}
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
 
 securityContext:
   allowPrivilegeEscalation: false
