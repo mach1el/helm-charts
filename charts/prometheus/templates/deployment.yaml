@@ -22,7 +22,7 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ template "prometheus.serviceAccountName.server" . }}
+      serviceAccountName: {{ include "prometheus.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       hostname: {{ include "prometheus.fullname" . }}
