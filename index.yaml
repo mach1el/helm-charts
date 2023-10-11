@@ -9,9 +9,9 @@ entries:
         - name: Upstream Project
     apiVersion: v2
     appVersion: v2.47.0
-    created: "2023-10-11T18:38:49.732116415+07:00"
+    created: "2023-10-11T21:22:17.932946553+07:00"
     description: Prometheus Helm chart for Kubernetes
-    digest: 195250e32df470e90c95408fa2cfa40cc93d84312da0f70402ea88d2ec14ae16
+    digest: 82496ab880504211b07131272db0f94cd5338266a74a790a6f96a63e4cf8a674
     home: https://prometheus.io/
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     keywords:
@@ -26,4 +26,4 @@ entries:
     urls:
     - https://mach1el.github.io/helm-charts/prometheus-1.0.0.tgz
     version: 1.0.0
-generated: "2023-10-11T18:38:49.731449379+07:00"
+generated: "2023-10-11T21:22:17.932557634+07:00"
