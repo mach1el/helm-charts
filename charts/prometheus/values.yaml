@@ -39,11 +39,11 @@ service:
 ingress:
   enabled: false
   className: nginx
+  annotations: {}
   hosts:
     - host: ""
       paths:
-        - backend:
-          path: /federate
+        - path: /federate
           pathType: Prefix
   tls: []
 
