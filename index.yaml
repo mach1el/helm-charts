@@ -9,7 +9,32 @@ entries:
         - name: Upstream Project
     apiVersion: v2
     appVersion: v2.47.0
-    created: "2023-10-11T21:41:43.546661643+07:00"
+    created: "2023-10-14T11:17:28.011705783+07:00"
+    description: Prometheus Helm chart for Kubernetes
+    digest: ba8def5613b1a4e23481526d2235c272e60a5c349efb5693b27d35deb8629c58
+    home: https://prometheus.io/
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - monitoring
+    - prometheus
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: th3phantom.m1@gmail.com
+      name: michael
+    name: prometheus
+    type: application
+    urls:
+    - https://mach1el.github.io/helm-charts/prometheus-1.0.1.tgz
+    version: 1.0.1
+  - annotations:
+      artifacthub.io/license: MIT
+      artifacthub.io/links: |-
+        - name: Chart Source
+          url: https://github.com/mach1el/helm-charts
+        - name: Upstream Project
+    apiVersion: v2
+    appVersion: v2.47.0
+    created: "2023-10-14T11:17:28.009226111+07:00"
     description: Prometheus Helm chart for Kubernetes
     digest: 7b0b0fbffcc08cd678e45a4bf03dee455ebb7d296d271d86c8062b762d887f45
     home: https://prometheus.io/
@@ -26,4 +51,4 @@ entries:
     urls:
     - https://mach1el.github.io/helm-charts/prometheus-1.0.0.tgz
     version: 1.0.0
-generated: "2023-10-11T21:41:43.546137012+07:00"
+generated: "2023-10-14T11:17:28.008833502+07:00"
