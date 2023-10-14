@@ -14,6 +14,6 @@ roleRef:
   name: {{ include "prometheus.fullname" . }}
 subjects:
 - kind: ServiceAccount
-  name: default
+  name: {{ include "prometheus.serviceAccountName" . }}
   namespace: {{ .Values.namespace }}
 {{ end }}
